@@ -1,0 +1,25 @@
+{
+    "name": "replum/bootstrap4-widgets",
+    "description": "Replum web widget framework: Bootstrap 4 widgets",
+    "authors": [
+        {
+            "name": "Dennis Birkholz",
+            "email": "dennis@birkholz.org"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Replum\\Bootstrap4\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Replum\\Bootstrap4\\": "tests/"
+        }
+    },
+    "require": {
+        "replum/html-widgets": "dev-master",
+        "components/jquery": "3.*",
+        "components/bootstrap": "4.0.0-alpha6"
+    }
+}
