@@ -1,5 +1,5 @@
 {
-    "name": "replum/bootstrap4-widgets",
+    "name": "replum/bootstrap4",
     "description": "Replum web widget framework: Bootstrap 4 widgets",
     "authors": [
         {
@@ -18,7 +18,7 @@
         }
     },
     "require": {
-        "replum/html-widgets": "dev-master",
+        "replum/framework": "dev-master",
         "components/jquery": "3.*",
         "components/bootstrap": "4.0.0-alpha6"
     }
