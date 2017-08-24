@@ -28,7 +28,7 @@ abstract class Page extends \Replum\Html\Page
         //$this->addStyleSheet((new StyleSheetLink())->setUrl('/components/bootstrap-datepicker/css/datepicker3.css'));
 
         $this->addScript((new ScriptLink())->setUrl($context->getUrlPrefix() . '/vendor/components/jquery/jquery.js'));
-        $this->addScript((new ScriptLink())->setUrl($context->getUrlPrefix() . '/vendor/replum/bootstrap4-widgets/js/tether.js'));
+        $this->addScript((new ScriptLink())->setUrl($context->getUrlPrefix() . '/vendor/replum/bootstrap4/js/tether.js'));
         $this->addScript((new ScriptLink())->setUrl($context->getUrlPrefix() . '/vendor/components/bootstrap/js/bootstrap.js'));
         //$this->addScript((new ScriptLink())->setUrl('/components/bootstrap-datepicker/js/bootstrap-datepicker.js'));
         //$this->addScript((new ScriptLink())->setUrl('/components/bootstrap-datepicker/js/locales/bootstrap-datepicker.de.js'));
