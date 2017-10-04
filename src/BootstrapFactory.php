@@ -10,12 +10,13 @@
 
 namespace Replum\Bootstrap4;
 
+use Replum\FontAwesome\Icon;
 use Replum\Html\HtmlElement;
 use Replum\HtmlFactory as Html;
 
 abstract class BootstrapFactory
 {
-    public static function card(string $title, HtmlElement ...$elements)
+    public static function cardWithIcon(string $title, Icon $icon = null, HtmlElement ...$elements)
     {
         $card = Html::div()
             ->addClass('card')
@@ -26,18 +27,27 @@ abstract class BootstrapFactory
                         Html::div()
                             ->addClass('card-title-block')
                             ->add(
-                                Html::h3()
+                                $headline = Html::h3()
                                     ->addClass('title')
-                                    ->add(Html::text($title))
                             )
                     )
             )
         ;
+
+        if ($icon !== null) {
+            $headline->add($icon);
+        }
+        $headline->add(Html::text($title));
 
         foreach ($elements as $element) {
             $cardBlock->add($element);
         }
 
         return $card;
+    }
+
+    public static function card(string $title, HtmlElement ...$elements)
+    {
+        return self::cardWithIcon($title, null, ...$elements);
     }
 }
